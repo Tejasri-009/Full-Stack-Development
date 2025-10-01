@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The cascade algorithm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libertinus+Keyboard&display=swap" rel="stylesheet">
+</head>
+<style>
+    h2 {
+        color: coral;
+    }
+
+    /* here iam trying to styke the a div with multiple classs but it style the last one give i.e; yellow one-thelastone based on position */
+    .position {
+        padding: 10PX;
+        text-align:left;
+        background-color: cornflowerblue;
+        color: black;
+    }
+
+    .lastone {
+        background-color: yellow;
+        color: red;
+
+    }
+
+    /* id and attribute selector in specificity */
+
+    #specificity {
+        padding: 10px;
+        background-color: darkturquoise;
+    }
+
+    p{
+        padding: 10px;
+        background-color: aquamarine;
+        color: black;
+    }
+
+    .importance {
+        padding: 10px;
+        color: crimson !important;
+        background-color: beige !important;
+    }
+
+    div {
+        font-family:"Libertinus Keyboard", system-ui;
+        font: weight 10px; 
+    }
+</style>
+
+<body>
+    <h2 style="color:darkviolet"> The cascade algorithm</h2>
+    <dd>
+        it is used to specifies which style should applied when multiple styles given to an attribute.<br>
+        basically it dependes upon the four stages they are:
+    </dd>
+    <ul>
+
+        <li class="position lastone"><b> position</b>
+
+            <dd>the position defines that the last element which we styled,the css gives more preferencee to that
+                one
+                style.
+            </dd>
+        </li>
+    </ul>
+
+    <li id="specificity"><b>Specificity</b>
+        <dd>based on the specificity of the attribute it gives the importance<br>
+            the order is <b>inline &nbsp;&gt; id selector&nbsp; &gt; class or attribute selector&nbsp;&gt;
+                element
+                selector&nbsp;&gt; universal selector</b></dd><br>
+    </li>
+
+    <p>basically we calculate the specificity like this:
+    <ul>
+        <li><b> Universal Selector: 0</b>
+        <li><b>Element selectors and pseudo-elements: 1</b><br>
+        <li><b>Class selectors, attribute selectors, and pseudo-classes: 10</b>
+        <li><b>Inline styles: 1000 </b> </li>
+    </ul>
+    </p>
+
+
+    <ul>
+        <li class="importance"><b>importance</b>
+            <dd>if u write important then it takes high priority to style</dd>
+        </li>
+    </ul>
+
+    <div>
+        <b>time to see how it goes</b>
+    </div>
+    <span>
+        <li>Position-</li>
+        
+    </span>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css selectors</title>
+    <style>
+        .class_selector {
+            background-color: rgb(125, 185, 238);
+            color: black;
+        }
+
+        #id_selector {
+            background-color: coral;
+            color: azure;
+        }
+
+        a:active {
+            background-color: rgb(209, 187, 171);
+        }
+
+        a:hover {
+            background-color: rgb(157, 199, 201);
+        }
+
+        a::after {
+            content:".";
+            background-color: khaki;
+            display: inline-block;
+            margin: 2px;
+            border: 2px;
+        }
+        
+      
+        a::before {
+            content:".";
+            display: inline-block;
+            background-color: hotpink;
+            margin: 2px;
+            border: 2px;
+        }
+
+        /* first child selector: which only consider the first line in that particular attribute */
+
+        div>p:first-child{
+            background-color: mediumslateblue;
+          
+        }
+
+        /* descedent selector:which selects multiple childrens */
+        div p {
+            background-color: burlywood;
+            color: black;
+        }
+        /* universal selector w: which he;ps style entire page.. */
+        *{
+            border: 0px solid black;
+            margin: 3px;
+            padding:7px;
+            box-sizing: 2px solid black
+            ;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>The css selectors.</h2>
+    <dl>
+        <dt>
+            Selectors
+        </dt>
+        <dd>
+            there are used to style a specific part in our code.
+        </dd>
+    </dl>
+    <ul type="square">
+        <li>
+            class selector✌️
+        </li>
+        <li>
+            id selector✌️
+        </li>
+        <li>
+           pseudo selector✌️
+        </li>
+        <li>
+            universal selector✌️
+        </li>
+    </ul>
+    <!-- class selector -->
+    <div class="class_selector">
+        iam your teju..(the class_selector🪶)
+    </div>
+    <!-- id selector -->
+    <div id="id_selector">
+        iam basically an introverted person.and very interesting and unique person.(id selector🎈)
+    </div>
+    <!-- pseudo selector -->
+    <a href="https://quora.com"> Go to quora</a>
+    <a href="https://wikipedia.com"> Go to wikipedia</a>
+    <a href="https://codewithharry.com"> Go to codewithharry</a>
+    <!-- first child selector -->
+    <div>
+        <p>
+            who is very shy,who can't easily make bonds with others
+           (&quot; this is the first child&quot;📌)
+        </p>
+        <!-- the first line in the div called direct child or first child " div>p:first-child" -->
+        <span>
+            <p>and afraid to talk first with the others. and especially to make a first move from my side..&nbsp;<br>
+            (&quot; the second child of div we used descedent selector🎈&quot;)</p>
+        </span>
+    </div>
+
+
+</body>
+
+</html>
